@@ -1,5 +1,5 @@
 "use client";
-
+/* eslint-disable @next/next/no-img-element */
 // ===============================
 // app/page.tsx — 進階功能＋操作說明＋差異熱圖＆放大鏡（browser-image-compression 版）
 // - 操作說明（ⓘ 說明彈窗）
@@ -383,8 +383,8 @@ export default function Page() {
       ctx.beginPath(); ctx.moveTo(r,0); ctx.lineTo(r,diameter); ctx.strokeStyle = "rgba(0,0,0,.6)"; ctx.stroke();
 
       // 讓鏡片跟著滑鼠
-      (lens.style as any).left = `${x - r}px`;
-      (lens.style as any).top = `${y - r}px`;
+lens.style.left = `${x - r}px`;
+lens.style.top  = `${y - r}px`;
     }, [zoom, diameter]);
 
     return (
